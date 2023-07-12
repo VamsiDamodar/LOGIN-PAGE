@@ -1,0 +1,89 @@
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Chegg Expert Login</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<style>
+    button{
+        background-color:orangered;
+        width:200px;
+        height:30px;
+        border-radius:20px;
+    }
+ .box{
+   positon:absolute;
+    background-color:white;
+   margin:200px;
+   border:1px solid black;
+   width: 400px;
+  }
+  p{
+     padding:20px; 
+    }
+  body{
+     background-image:C:\Users\VAMSI DAMODARA\Desktop\WT ASSIGNMENT\chegg.avif;
+     repeat:no-repeat;
+     }
+     input{
+        width:200px;
+        height:35px;
+     }
+     #two{
+        padding:0px;
+        width: 400px;
+        height:170px;
+        background-color: rgba(0, 0, 0, 0.123);
+     }
+    #three{
+        padding-left:77px;
+        text-align: left;
+    }
+</style>
+<script>
+    function validate()
+    let fname=document.myform.name.value;
+    {
+        if(fname==null  || fname=="")
+        {
+        alert("Enter name Filed");
+        return false;
+        }
+        return true;
+    }
+    function valname(id)
+        {
+            let element=document.getElementById('name1');
+            let regex=/^[a-zA-Z]+$/;
+            if(!regex.test(element.value))
+            {
+                document.getElementById('nam').style.visibility='visible';
+                element.style.border="2px solid red";
+                return false;
+            }
+            document.getElementById('nam').style.visibility='hidden';
+            element.style.border="2px solid green";
+        }
+</script>
+    <body background="C:\Users\VAMSI DAMODARA\Desktop\WT ASSIGNMENT\chegg.avif">
+     <center>
+        <form  class="box" action=""  name="myform" onsubmit="validate()">
+            <div id="two"><br>
+            <h1 style="color:orangered; font-size:45px;">Chegg</h1>
+            <h3>The Expert Hub</h3>
+            </div><br>
+            <label><b>Welcome</b></label><br><br>
+            <label>Enter your registered username</label><br><br>
+            <div id="three"><br>
+            <label><b>Username</b></label><br><br></div>
+            <input type="text" name="name" id="name1" onblur="valname(this.id)">
+            <label id="nam" style="color:red; visibility:hidden;">Invalid</label><br><br><br><br><br><br><br><br><br>
+            <div id="one">     
+            <button type="submit"  name="submit" value="LOGIN" style="color:white;">Proceed</button>
+                </div>
+            <p class="link" style="color:orangered;"> Don't have  an account <br>REGISTER &nbsp;<a href ="C:\Users\VAMSI DAMODARA\Documents\HTML FILES\_HTML FILES_\register.html" style="text-decoration:none;">HERE</a></p>
+            <p><a href="C:\Users\VAMSI DAMODARA\Documents\HTML FILES\_HTML FILES_\LOGIN PAGE\forgot password page.html" style="text-decoration:none;"><b>Forgot Password</b></a></p>
+             </form>
+         </center>
+        </body>
+        </html>
